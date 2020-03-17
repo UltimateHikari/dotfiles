@@ -37,8 +37,8 @@ exec_always --no-startup-id picom --config /home/andy/.config/picom.conf
 # #---Program start bindings---# #
 
 # --Screenshots with scrot
-bindsym --release Shift+$print  exec scrot -s -q 100 ~/Pictures/Screenshots/%Y-%m-%d::%H%M%S.png
-bindsym --release print        exec scrot -q 100 ~/Pictures/Screenshots/%Y-%m-%d::%H%M%S.png
+bindsym --release Shift+$print  exec scrot -s -q 100 ~/Pictures/Screenshots/%Y-%m-%d_%H%M%S.png
+bindsym --release print        exec scrot -q 100 ~/Pictures/Screenshots/%Y-%m-%d_%H%M%S.png
 
 # --Start a terminal
 bindsym $mod+Return exec i3-sensible-terminal

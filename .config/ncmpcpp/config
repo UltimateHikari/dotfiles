@@ -80,7 +80,7 @@ mpd_crossfade_time = 5
 #
 ## Available values: spectrum, wave, wave_filled, ellipse.
 ##
-#visualizer_type = wave
+visualizer_type = ellipse
 #
 #visualizer_look = ●▮
 #
