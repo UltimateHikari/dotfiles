@@ -30,15 +30,15 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # --Transparency with Compton/Picom
 exec_always --no-startup-id picom --config /home/andy/.config/picom.conf
 # --Screensaver
-#exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 300 $HOME/.scripts/fancylock.sh
+exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 300 $HOME/.scripts/fancylock.sh
 # --MPD
-#exec --no-startup-id mpd $HOME/.configs/mpd/mpd.conf
+exec --no-startup-id mpd $HOME/.configs/mpd/mpd.conf
 
 # #---Program start bindings---# #
 
 # --Screenshots with scrot
 bindsym --release Shift+$print  exec scrot -s -q 100 ~/Pictures/Screenshots/%Y-%m-%d_%H%M%S.png
-bindsym --release print        exec scrot -q 100 ~/Pictures/Screenshots/%Y-%m-%d_%H%M%S.png
+bindsym --release $print        exec scrot -q 100 ~/Pictures/Screenshots/%Y-%m-%d_%H%M%S.png
 
 # --Start a terminal
 bindsym $mod+Return exec i3-sensible-terminal

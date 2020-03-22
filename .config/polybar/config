@@ -36,7 +36,8 @@ teal = #8ec07c
 neutral-purple = #b16286
 
 [bar/bar]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = DP2-1
+monitor-fallback = eDP1
 width = 100%
 height = 27
 ;offset-x = 1%
