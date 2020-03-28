@@ -14,11 +14,13 @@ alias \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
+
 # Productivity shortcuts
 alias tsm="transmission-remote-cli"
 alias musicsync="sudo rsync -rlptDzv --size-only --delete-delay --progress /media/AndyArchive/Music/  /mnt/MusicOnCayin/"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias realias='. ~/.config/zsh/.zshrc'
+alias memocom='nvim ~/AndyData/commands'
 
 # Programming shortcuts
 alias vivado='/home/andy/Bloat/Vivado/Vivado/2019.2/bin/vivado -log /home/andy/Bloat/Vivado/vivado.log -journal /home/andy/Bloat/Vivado/vivado.jou'
