@@ -29,10 +29,10 @@ bindsym $Mod+Shift+t gaps inner current set 0; gaps outer current set 0
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # --Transparency with Compton/Picom
 exec_always --no-startup-id picom --config /home/andy/.config/picom.conf
-# --Screensaver
-exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 300 $HOME/.scripts/fancylock.sh
-# --MPD
-exec --no-startup-id mpd $HOME/.configs/mpd/mpd.conf
+# --MPD (service in systemd now)
+#exec --no-startup-id mpd $HOME/.configs/mpd/mpd.conf
+# --Xrandr script (in xorg.conf now)
+#exec $HOME/.script/catchmon.sh
 
 # #---Program start bindings---# #
 
@@ -190,7 +190,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Save-promts in browser fix
 floating_minimum_size 75 x 50

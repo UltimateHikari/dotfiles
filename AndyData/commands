@@ -1,0 +1,21 @@
+#do to find what that module is for
+	modinfo <modname>
+#disk managements things
+	df -h 	#currenlty mounted
+	cfdisk 	#partition things
+	lsblk 	#lisk block devices
+	blkid	#for uuid
+	lsusb -v #touch external usb
+#X server tools
+	xprop - x property displayer, can check class of wnd
+#screen stuff
+	/etc/systemd/logind.conf
+	mons    #hotplug monitors
+#mediaplayer
+	mpv (man mpv)
+	youtube-dl #download vids
+#fun
+ 	cmatrix # ^C to leave the matrix
+#torrents 
+	transmission-remote-cli (tsm) 
+# dd bs=4M if=путь/до/archlinux.iso of=/dev/sdx status=progress oflag=sync
