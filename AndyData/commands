@@ -2,15 +2,20 @@
 	modinfo <modname>
 #disk managements things
 	df -h 	#currenlty mounted
+	du 	#disk usage
+        dd bs=4M if=<path>.iso of=/dev/sdx status=progress oflag=sync
+		# if need liveusb asap
 	cfdisk 	#partition things
 	lsblk 	#lisk block devices
 	blkid	#for uuid
 	lsusb -v #touch external usb
+	wc #word counter
 #X server tools
 	xprop - x property displayer, can check class of wnd
 #screen stuff
 	/etc/systemd/logind.conf
-	mons    #hotplug monitors
+	mons  (AUR)  #simple hotplug monitors
+	xrandr #actually, better
 #mediaplayer
 	mpv (man mpv)
 	youtube-dl #download vids
@@ -21,4 +26,3 @@
 	traceroute
 	ss -tulpn # utility to investigte sockets, > netstat 
 		   tcp/udp/listening/processes/numeric
-# dd bs=4M if=путь/до/archlinux.iso of=/dev/sdx status=progress oflag=sync
