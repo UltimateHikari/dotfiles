@@ -26,3 +26,7 @@
 	traceroute
 	ss -tulpn # utility to investigte sockets, > netstat 
 		   tcp/udp/listening/processes/numeric
+# Cmake	
+	set(CMAKE_C_FLAGS "-fsanitize=address -fno-optimize-sibling-calls -fsanitize-address-use-after-scope -fno-omit-frame-pointer -g -O1"
+#self-explanatory
+	hexdump

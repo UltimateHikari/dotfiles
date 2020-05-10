@@ -165,9 +165,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use mpc for external keyboard
-bindsym XF86AudioPlay exec --nostartup-is mpc play
-bindsym XF86AudioNext exec --nostartup-is mpc next
-bindsym XF86AudioPrev exec --nostartup-is mpc prev
+bindsym XF86AudioPlay exec --nostartup-id mpc play
+bindsym XF86AudioNext exec --nostartup-id mpc next
+bindsym XF86AudioPrev exec --nostartup-id mpc prev
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
