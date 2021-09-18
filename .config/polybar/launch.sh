@@ -5,4 +5,5 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Запуск Polybar со стандартным расположением конфигурационного файла в ~/.config/polybar/config
+#polybar -l info bar 2> ~/.config/polybar/logfile &
 polybar bar &

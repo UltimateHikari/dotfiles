@@ -16,7 +16,7 @@ alias \
 	ccat="highlight --out-format=ansi"
 
 # Productivity shortcuts
-alias tsm="transmission-remote-cli"
+alias tsm="transmission-daemon && tremc"
 alias musicsync="sudo rsync -rlptDzv --size-only --delete-delay --progress /media/AndyArchive/Music/  /mnt/MusicOnCayin/"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias realias='. ~/.config/zsh/.zshrc'
@@ -25,4 +25,21 @@ alias memocom='nvim ~/AndyData/commands'
 # Programming shortcuts
 alias vivado='/home/andy/Bloat/Vivado/Vivado/2019.2/bin/vivado -log /home/andy/Bloat/Vivado/vivado.log -journal /home/andy/Bloat/Vivado/vivado.jou'
 alias cbuild='cd ./build && cmake .. && make; cd ..'
-
+alias evmssh='ssh -vv -Y -i ~/.ssh/evmpu -p 2222 evmpu@84.237.52.21'
+alias oppssh='ssh -vv -Y -i ~/.ssh/opp -p 2222 opp@84.237.52.21'
+evmsend(){ 
+ scp -i ~/.ssh/evmpu -P 2222 "$1" evmpu@84.237.52.21:/home/evmpu/19201/Rudometov"$2"
+}
+evmget(){
+ scp -i ~/.ssh/evmpu -P 2222 evmpu@84.237.52.21:/home/evmpu/19201/Rudometov"$1" "$2"
+}
+alias toevm='~/Code/2020_seminars/evm/lab9'
+alias ccfitssh='luit -encoding KOI8-R ssh a.rudometov@ccfit.nsu.ru'
+alias clussh='ssh -X hpcuser143@clu.nusc.ru'
+#alias tosys="~/Code/2021/systems/lab34m"
+alias tosb="~/Code/2021/sberlab/knative"
+alias gb="go build -o ../bin/$1"
+alias k="kubectl"
+ff(){
+    flowc1 jar=1 $1.flow && java -jar $1.jar
+}
