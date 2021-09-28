@@ -1,7 +1,12 @@
 emulate sh -c 'source /etc/profile'
 
+# 3rd grade
 export FLOW="$HOME/Bloat/flow9"
-export PATH="$PATH:$FLOW/bin"
+export UML="$HOME/Bloat/astah/astah_uml"
+export PATH="$PATH:$FLOW/bin:$UML"
+
+# ssh
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # ~/ Clean-up
 export WGETRC="$HOME/.config/wget/wgetrc"
