@@ -43,3 +43,4 @@ alias k="kubectl"
 ff(){
     flowc1 jar=1 $1.flow && java -jar $1.jar
 }
+alias gtoken="cat ~/AndyData/githubtoken"
