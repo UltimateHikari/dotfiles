@@ -7,30 +7,30 @@ T='#b8bb26ee'  # text
 W='#fb4934bb'  # wrong
 V='#bb00bbbb'  # verifying
 
-i3lock \
---insidevercolor=$B   \
---ringvercolor=$D     \
+i3lock  \
+--insidever-color=$B   \
+--ringver-color=$D     \
 \
---insidewrongcolor=$B \
---ringwrongcolor=$W   \
+--insidewrong-color=$B \
+--ringwrong-color=$W   \
 \
---insidecolor=$B      \
---ringcolor=$D        \
---linecolor=$B        \
---separatorcolor=$D   \
+--inside-color=$B      \
+--ring-color=$D        \
+--line-color=$B        \
+--separator-color=$D   \
 \
---verifcolor=$T        \
---wrongcolor=$T        \
---timecolor=$T        \
---datecolor=$T        \
---layoutcolor=$T      \
---keyhlcolor=$C       \
---bshlcolor=$C        \
+--verif-color=$T        \
+--wrong-color=$T        \
+--time-color=$T        \
+--date-color=$T        \
+--layout-color=$T      \
+--keyhl-color=$C       \
+--bshl-color=$C        \
 \
 --screen 1            \
 --blur 6              \
 --clock              \
---timestr="%H:%M:%S"  \
---datestr="%A, %m %Y" \
+--time-str="%H:%M:%S"  \
+--date-str="%A, %m %Y" \
 --keylayout 2         \
---veriftext="logging"
+--verif-text="logging"
