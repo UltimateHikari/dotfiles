@@ -44,3 +44,8 @@ ff(){
     flowc1 jar=1 $1.flow && java -jar $1.jar
 }
 alias gtoken="cat ~/AndyData/githubtoken"
+alias gprep="ssh-add ~/.ssh/github_ed25519"
+alias touni="cd /media/AndyArchive/10_Arch_uni_Backup/3Grade; ranger"
+alias snake="cd ~/Code/2021/net/SnakeCursesClient/target"
+alias copyschema="sudo cp ~/Code/2021/oooad/fairlabs/postgres/schema.sql /var/lib/postgres/"
+alias wiki="gollum ~/Code/hikari-wiki/"
