@@ -42,7 +42,8 @@ bindsym --release $print        exec scrot -q 100 ~/Pictures/Screenshots/%Y-%m-%
 
 # --Start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec termite
+#bindsym $mod+Return exec termite rip 01.02.2022 as deprecated log ago
+bindsym $mod+Return exec alacritty
 
 # --Start dmenu
 bindsym $mod+d exec dmenu_run
