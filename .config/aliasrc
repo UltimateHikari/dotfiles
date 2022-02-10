@@ -31,7 +31,15 @@ alias \
     gprep='ssh-add ~/.ssh/github_ed25519'                           \
     wiki='gollum ~/Code/hikari-wiki/'                               \
     touni='cd /media/AndyArchive/10_Arch_uni_Backup/3Grade; ranger'
-    
+
+# Git
+alias \
+    gss='git status'                \
+    ga='git add -A'                 \
+    gca='git add -A && git commit'  \
+    gp='gtoken && git push'         \
+    gpp='gprep && git push'          
+
 # SSH
 EVMIP='84.237.52.21'
 KIP='46.243.142.144'
