@@ -44,11 +44,11 @@ alias \
 EVMIP='84.237.52.21'
 KIP='46.243.142.144'
 alias \
+    kssh='ssh -v -i ~/Code/2022/sberlab_keys/KeyPair-rudometov.pem root@'"$KIP" \
     evmssh='ssh -vv -Y -i ~/.ssh/evmpu -p 2222 evmpu@'"$EVMIP"      \
     oppssh='ssh -vv -Y -i ~/.ssh/opp -p 2222 opp@'"$EVMIP"          \
-    clussh='ssh -X hpcuser143@clu.nusc.ru'                              \ 
-    ccfitssh='luit -encoding KOI8-R ssh a.rudometov@ccfit.nsu.ru'       \
-    kssh='ssh -v -i ~/Code/2022/sberlab_keys/KeyPair-rudometov.pem root@'"KIP" 
+    clussh='ssh -X hpcuser143@clu.nusc.ru'  \
+    ccfitssh='luit -encoding KOI8-R ssh a.rudometov@ccfit.nsu.ru'
 
 # Functions
 evmsend(){ 
