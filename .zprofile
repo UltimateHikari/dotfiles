@@ -20,8 +20,9 @@ export GOBIN="$GOPATH/bin"
 # 3rd grade
 export FLOW="$HOME/Bloat/flow9"
 export UML="$HOME/Bloat/astah/astah_uml"
+export KREW_PROFILE="${KREW_ROOT:-$HOME/.krew}/bin"
 
 # ruby for gollum wiki
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 
-export PATH="$PATH:$FLOW/bin:$UML:$GEM_HOME/bin"
+export PATH="$PATH:$FLOW/bin:$UML:$GEM_HOME/bin:$KREW_PROFILE"

@@ -21,7 +21,8 @@ alias \
     musicsync="sudo rsync -rlptDzv --size-only --delete-delay --progress /media/AndyArchive/Music/  /mnt/MusicOnCayin/"   \
     config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'    \
     realias='. ~/.config/zsh/.zshrc'                                    \
-    memocom='nvim ~/AndyData/commands'
+    memocom='nvim ~/AndyData/commands'                                  \
+    wifilog='journalctl -xe | grep iwl'
 
 # Programming shortcuts
 alias \
@@ -30,7 +31,8 @@ alias \
     gtoken='cat ~/AndyData/githubtoken'                             \
     gprep='ssh-add ~/.ssh/github_ed25519'                           \
     wiki='gollum ~/Code/hikari-wiki/'                               \
-    touni='cd /media/AndyArchive/10_Arch_uni_Backup/3Grade; ranger'
+    touni='cd /media/AndyArchive/10_Arch_uni_Backup/3Grade; ranger' \
+    cppbuild='cmake -S . -B build && cmake --build build; cd build/tests && ctest; cd ../..'
 
 # Git
 alias \
@@ -56,6 +58,9 @@ evmsend(){
 }
 evmget(){
  scp -i ~/.ssh/evmpu -P 2222 evmpu@"$EVMIP":/home/evmpu/19201/Rudometov"$1" "$2"
+}
+kget(){
+ scp -i ~/Code/2022/sberlab_keys/KeyPair-rudometov.pem root@"$KIP":~/"$1" "$2"
 }
 ff(){
     flowc1 jar=1 $1.flow && java -jar $1.jar
