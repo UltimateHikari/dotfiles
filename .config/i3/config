@@ -23,16 +23,23 @@ bindsym $Mod+t gaps inner current set $gin; gaps outer current set $gout;
 # gaps top current set $gtop;
 bindsym $Mod+Shift+t gaps inner current set 0; gaps outer current set 0
 
-
 # #---On-startup execs---# #
 # --Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # --Transparency with Compton/Picom
 exec_always --no-startup-id picom --config /home/andy/.config/picom.conf
+# --Safe-eyes-thingy
+exec_always --no-startup-id safeeyes
 # --MPD (service in systemd now)
 #exec --no-startup-id mpd $HOME/.configs/mpd/mpd.conf
 # --Xrandr script (in xorg.conf now)
 #exec $HOME/.script/catchmon.sh
+
+# #---Layout restore---# #
+exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/ws-2.json'"
+exec i3-msg 'exec firefox-developer-edition'
+exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/ws-7.json'"
+exec i3-msg 'exec telegram-desktop'
 
 # #---Program start bindings---# #
 

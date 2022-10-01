@@ -1,0 +1,26 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 843,
+       "width": 1578,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "i3 on Manjaro, i3-save-tree not working. Missing AnyEvent! : i3wm — Firefox Developer Edition",
+    "percent": 1,
+    "swallows": [
+       {
+        "class": "^firefoxdeveloperedition$",
+       // "instance": "^Navigator$",
+       // "machine": "^andystpad$",
+       // "title": "^i3\\ on\\ Manjaro\\,\\ i3\\-save\\-tree\\ not\\ working\\.\\ Missing\\ AnyEvent\\!\\ \\:\\ i3wm\\ \\—\\ Firefox\\ Developer\\ Edition$",
+       // "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+

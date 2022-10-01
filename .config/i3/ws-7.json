@@ -1,0 +1,25 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 843,
+       "width": 1578,
+       "x": 11,
+       "y": 46
+    },
+    "marks": [],
+    "name": "Telegram",
+    "percent": 1,
+    "swallows": [
+       {
+       // "class": "^TelegramDesktop$",
+        "instance": "^telegram\\-desktop$",
+       // "machine": "^andystpad$",
+       // "title": "^Telegram$"
+       }
+    ],
+    "type": "con"
+}
+

@@ -32,7 +32,9 @@ alias \
     gprep='ssh-add ~/.ssh/github_ed25519'                           \
     wiki='gollum ~/Code/hikari-wiki/'                               \
     touni='cd /media/AndyArchive/10_Arch_uni_Backup/3Grade; ranger' \
-    cppbuild='cmake -S . -B build && cmake --build build; cd build/tests && ctest; cd ../..'
+    cppbuild='cmake -S . -B build && cmake --build build; make test; cd build/tests && ctest | tail; cd ../..' \
+    toelancer='cd /home/andy/Code/2022/lancer/build/src' \
+    tolancer='cd /home/andy/Code/2022/lancer' 
 
 # Git
 alias \
@@ -40,13 +42,21 @@ alias \
     ga='git add -A'                 \
     gca='git add -A && git commit'  \
     gp='gtoken && git push'         \
-    gpp='gprep && git push'          
+    gpp='gprep && git push'         \
+    gl='git log --oneline --decorate --graph'
+
+# kube
+alias \
+    ckubeupp='rm ~/.kube/config; ln ~/.kube/config-upp ~/.kube/config'  \
+    ckubesb='rm ~/.kube/config; ln ~/.kube/config-sb ~/.kube/config'
 
 # SSH
 EVMIP='84.237.52.21'
-KIP='46.243.142.144'
+KIP='46.243.201.172'
+UPPIP='37.230.196.38'
 alias \
-    kssh='ssh -v -i ~/Code/2022/sberlab_keys/KeyPair-rudometov.pem root@'"$KIP" \
+    kssh='ssh -i ~/Code/2022/sberlab_keys/KeyPair-rudometov.pem root@'"$KIP" \
+    ussh='ssh -i ~/Code/2022/sberlab_keys/KeyPair-rudometov.pem root@'"$UPPIP" \
     evmssh='ssh -vv -Y -i ~/.ssh/evmpu -p 2222 evmpu@'"$EVMIP"      \
     oppssh='ssh -vv -Y -i ~/.ssh/opp -p 2222 opp@'"$EVMIP"          \
     clussh='ssh -X hpcuser143@clu.nusc.ru'  \
