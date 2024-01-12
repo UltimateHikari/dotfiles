@@ -6,7 +6,8 @@ alias \
 	mv="mv -iv"                                     \
 	rm="rm -iv"                                     \
 	mkd="mkdir -pv"                                 \
-	ffmpeg="ffmpeg -hide_banner"
+	ffmpeg="ffmpeg -hide_banner"                    \
+    rg="ranger"
 
 # Colorize commands when possible.
 alias \
@@ -22,7 +23,8 @@ alias \
     config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'    \
     realias='. ~/.config/zsh/.zshrc'                                    \
     memocom='nvim ~/AndyData/commands'                                  \
-    wifilog='journalctl -xe | grep iwl'
+    wifilog='journalctl -xe | grep iwl'                                 \
+    sn='simplenote --no-sandbox'
 
 # Programming shortcuts
 alias \
@@ -30,11 +32,16 @@ alias \
     k='kubectl'                                                     \
     gtoken='cat ~/AndyData/githubtoken'                             \
     gprep='ssh-add ~/.ssh/github_ed25519'                           \
+    pprep='ssh-add ~/.ssh/pgpro_ed25519'                           \
     wiki='gollum ~/Code/hikari-wiki/'                               \
     touni='cd /media/AndyArchive/10_Arch_uni_Backup/3Grade; ranger' \
     cppbuild='cmake -S . -B build && cmake --build build; make test; cd build/tests && ctest | tail; cd ../..' \
     toelancer='cd /home/andy/Code/2022/lancer/build/src' \
-    tolancer='cd /home/andy/Code/2022/lancer' 
+    tolancer='cd /home/andy/Code/2022/lancer'           \
+    studio='~/Bloat/android-studio/bin/studio.sh'       \
+    topg='~/Code/postgres-tasks/PGPRO-8124'             \
+    rgmtm='ranger ./contrib/mmts/tmp_check/log'
+
 
 # Git
 alias \
@@ -43,6 +50,7 @@ alias \
     gca='git add -A && git commit'  \
     gp='gtoken && git push'         \
     gpp='gprep && git push'         \
+    ppp='pprep && git push'         \
     gl='git log --oneline --decorate --graph'
 
 # kube
@@ -62,6 +70,9 @@ alias \
     clussh='ssh -X hpcuser143@clu.nusc.ru'  \
     ccfitssh='luit -encoding KOI8-R ssh a.rudometov@ccfit.nsu.ru'
 
+alias \
+    pgvpn='sudo openvpn AndyData/pgpro/a.rudometov-dns.ovpn'
+
 # Functions
 evmsend(){ 
  scp -i ~/.ssh/evmpu -P 2222 "$1" evmpu@"$EVMIP":/home/evmpu/19201/Rudometov"$2"
@@ -74,6 +85,9 @@ kget(){
 }
 ff(){
     flowc1 jar=1 $1.flow && java -jar $1.jar
+}
+lsdu(){
+    sudo du -hx --max-depth=1 --time --time-style=iso $1
 }
 
 # Deprecated

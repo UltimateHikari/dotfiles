@@ -25,4 +25,7 @@ export KREW_PROFILE="${KREW_ROOT:-$HOME/.krew}/bin"
 # ruby for gollum wiki
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 
-export PATH="$PATH:$FLOW/bin:$UML:$GEM_HOME/bin:$KREW_PROFILE"
+# pgindent path
+export PGINDENT_PATH="$HOME/Bloat/pgindent-2.1.2"
+
+export PATH="$PATH:$GEM_HOME/bin:$PGINDENT_PATH/bin"
